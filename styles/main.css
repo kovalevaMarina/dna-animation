@@ -1,0 +1,260 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.main-wrap {
+  min-height: 100vh;
+  background-color: #90A5D0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dna-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 200px;
+  margin-bottom: 10px;
+}
+
+.dna-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.dna-circle--1 {
+  background-color: #4E3C7A;
+  -webkit-animation-name: trans-circle-white;
+          animation-name: trans-circle-white;
+}
+
+.dna-circle--2 {
+  background-color: #F7CEA2;
+  -webkit-animation-name: trans-circle-blue;
+          animation-name: trans-circle-blue;
+}
+
+.dna-row:nth-child(2) .dna-circle {
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+.dna-row:nth-child(3) .dna-circle {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+.dna-row:nth-child(4) .dna-circle {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+.dna-row:nth-child(5) .dna-circle {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+
+.dna-row:nth-child(6) .dna-circle {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+}
+
+@-webkit-keyframes trans-circle-blue {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-220px);
+            transform: translateX(-220px);
+  }
+}
+
+@keyframes trans-circle-blue {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(-220px);
+            transform: translateX(-220px);
+  }
+}
+
+@-webkit-keyframes trans-circle-white {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+  }
+}
+
+@keyframes trans-circle-white {
+  0%, 100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  50% {
+    -webkit-transform: translateX(180px);
+            transform: translateX(180px);
+  }
+}

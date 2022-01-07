@@ -1,1 +1,73 @@
+@import "./var";
 @import "./reset";
+
+.main-wrap {
+    min-height: 100vh;
+    background-color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dna {
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        width: $container-width;
+        margin-bottom: 10px;
+    }   
+
+    &-circle {
+        width: $dna-diameter;
+        height: $dna-diameter;
+        border-radius: 50%;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        &--1 {
+            background-color: $purple;
+            animation-name: trans-circle-white;
+        }
+        &--2 {
+            background-color: $orange-white;
+            animation-name: trans-circle-blue;
+        }
+    }
+}
+
+.dna-row:nth-child(2) .dna-circle {
+    animation-delay: 0.1s;
+}
+
+.dna-row:nth-child(3) .dna-circle {
+    animation-delay: 0.2s;
+}
+
+.dna-row:nth-child(4) .dna-circle {
+    animation-delay: 0.3s;
+}
+
+.dna-row:nth-child(5) .dna-circle {
+    animation-delay: 0.4s;
+}
+
+.dna-row:nth-child(6) .dna-circle {
+    animation-delay: 0.5s;
+}
+
+@keyframes trans-circle-blue {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-$container-width - $dna-diameter);
+    }
+}
+
+@keyframes trans-circle-white {
+    0%, 100% {
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX($container-width - $dna-diameter);
+    }
+}
